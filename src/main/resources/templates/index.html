@@ -128,6 +128,7 @@
 
 </head>
 <body>
+<!--/*@thymesVar id="product" type="com.learn.thymeleaf.catalog.domain.Product"*/-->
 <div class="jumbotron">
     <div class="container">
         <h1>Online store</h1>
@@ -141,8 +142,10 @@
             <h1>Product</h1>
         </div>
     </div>
+    <div class="row course-list list" th:replace="fragments/product :: product">
 
-    <div class="row course-list list">
+    </div>
+    <div class="row course-list list" th:remove="all">
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">

@@ -18,11 +18,16 @@ public class LoginController {
         return "login";
     }
 
-    @PostMapping("/doLogin")
+    //@PostMapping("/doLogin")
     public String doLogin(@Valid LoginCommand loginCommand, BindingResult bindingResult) {
         if(bindingResult.hasErrors()) {
             return "/login";
         }
         return "redirect:/index";
+    }
+
+    @GetMapping("/secured")
+    public String secured() {
+        return "secured";
     }
 }
